@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-Live Link [Live Link](https://hotelbooktask.netlify.app/).
+[Live Link Here](https://hotelbooktask.netlify.app/).
 
 ## Available Scripts
 
