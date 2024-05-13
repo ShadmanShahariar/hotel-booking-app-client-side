@@ -6,9 +6,9 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Home from './components/home/Home';
 import { List } from './components/list/List';
 import { Hotel } from './components/hotel/Hotel';
+import { Home } from './components/home/Home';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
