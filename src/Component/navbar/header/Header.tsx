@@ -5,10 +5,13 @@ import {
   faCalendarDays,
   faCar,
   faHeart,
-  faHeartCirclePlus,
   faPlane,
   faTaxi,
 } from "@fortawesome/free-solid-svg-icons";
+import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
+import { LocalizationProvider } from "@mui/x-date-pickers-pro";
+import { AdapterDayjs } from "@mui/x-date-pickers-pro/AdapterDayjs";
+import { DateRangePicker } from "@mui/x-date-pickers-pro/DateRangePicker";
 
 export const Header = () => {
   return (
@@ -48,12 +51,24 @@ export const Header = () => {
             />
           </div>
           <div className="headerSearchItem">
-            <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
-            <span className="headerSearchText">Date Range</span>
+            {/* <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
+            <span className="headerSearchText">Date Range</span> */}
+            <div className="date">
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DemoContainer components={["DateRangePicker"]}>
+                  <DateRangePicker
+                    localeText={{ start: "Check-in", end: "Check-out" }}
+                  />
+                </DemoContainer>
+              </LocalizationProvider>
+            </div>
           </div>
           <div className="headerSearchItem">
             <FontAwesomeIcon icon={faHeart} className="headerIcon" />
             <span className="headerSearchText">Honeymoon Suite</span>
+          </div>
+          <div className="headerSearchItem">
+            <button className="headerButton">Search</button>
           </div>
         </div>
       </div>
